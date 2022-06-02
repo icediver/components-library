@@ -79,6 +79,10 @@ const HeroSection = styled.section`
   max-height: 1100px;
   position: relative;
   overflow: hidden;
+  @media screen and (max-width: 900px) {
+    height: 85vh;
+    
+  }
 `;
 const HeroWrapper = styled.div`
   width: 100%;

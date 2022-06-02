@@ -8,8 +8,9 @@ import Dropdown from './Dropdown';
 import { GlobalStyles } from '../../styles/Globalstyle';
 import Sidebar from './SideBar/Sidebar';
 import {ReactComponent as Logotype} from '../../assets/svg/logoipsum-logo-7.svg'
+import CheckBox1 from '../chekboxes/CheckBox1';
 
-const Navbar = ({ toggleTheme }) => {
+const Navbar = ({ toggleTheme, checked }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   
@@ -18,23 +19,24 @@ const Navbar = ({ toggleTheme }) => {
     <Nav>
       <Sidebar />
       <Container>
-        <Logo to="/">
-          <Logotype className='logo'/>
-        </Logo>
         {/* <MenuBars /> */}
         <GlobalStyles hidden={isOpen} />
         <NavMenu>
+        <Logo to="/">
+          <Logotype/>
+        </Logo>
           {menuData.map((item, index) => (
             <NavMenuLinks to={item.link} key={index}>
               {item.title}
             </NavMenuLinks>
           ))
           }
-          <NavBtn>
-          <Button onClick={toggleTheme} primary="true">
-            Toggle theme
-          </Button>
-        </NavBtn>
+          <CheckBox1 toggleTheme={toggleTheme} checked={checked}/>
+          {/* <NavBtn>
+            <Button onClick={toggleTheme} primary="true">
+              Toggle theme
+            </Button>
+          </NavBtn> */}
         </NavMenu>
         
         <Dropdown isOpen={isOpen} toggle={toggle} />
@@ -59,6 +61,7 @@ const Nav = styled.nav`
   background: rgba(0, 0, 0, 0.4);
   @media screen and (max-width: 900px) {
     justify-content: space-between;
+    
   }
 `;
 const Container = styled.div`
@@ -104,13 +107,14 @@ const NavMenu = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-right: -48px;
-  @media screen and (max-width: 900px) {
-    display: none;
-  }
+  
 `;
 
 const NavMenuLinks = styled(Link)`
   ${NavLink}
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 `;
 const NavBtn = styled.div`
   display: flex;

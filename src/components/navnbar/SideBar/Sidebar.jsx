@@ -9,19 +9,22 @@ const Sidebar = () => {
   const [open, setOpen] = useState(false);
   const ref = useRef();
   useOnClickOutside(ref, () => {
-    setOpen(false)
+    setOpen(false);
   });
-  
+
   return (
     <>
       <LeftBurgerButton>
-        <BurgerButton className="hhh" isOpen={open} onClick={() => {
-        setOpen(!open)        
-        }}/>
+        <BurgerButton
+          isOpen={open}
+          onClick={() => {
+            setOpen(!open);
+          }}
+        />
       </LeftBurgerButton>
-      
+
       <SidebarNav sidebar={open} ref={ref}>
-        <SidebarWrap >
+        <SidebarWrap>
           {SidebarData.map((item, index) => {
             return <SubMenu sidebar={open} item={item} key={index} />;
           })}
@@ -34,12 +37,11 @@ const Sidebar = () => {
 export default Sidebar;
 // Hook
 
-
 const SidebarNav = styled.nav`
   /* margin-top: 60px; */
   padding-top: 60px;
   background: #15171c;
- 
+
   width: 250px;
   height: 100vh;
   display: flex;
@@ -54,6 +56,4 @@ const SidebarNav = styled.nav`
 const SidebarWrap = styled.div`
   width: 100%;
 `;
-const LeftBurgerButton = styled.div`
-  
-`;
+const LeftBurgerButton = styled.div``;
