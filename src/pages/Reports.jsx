@@ -1,4 +1,5 @@
 import React from 'react';
+import Button3 from '../components/butttons/Button3';
 
 export const Reports = () => {
   return (
@@ -10,7 +11,8 @@ export const Reports = () => {
 export const ReportsOne = () => {
   return (
     <div className='reports'>
-      <h1>Reports/reports1</h1>
+      
+      <Button3/>
     </div>
   )
 };

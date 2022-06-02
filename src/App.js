@@ -15,13 +15,13 @@ const App = () => {
   const [theme, themeToggler] = useDarkMode();
 
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
-
+  const checked = theme === 'light' ? true : false;
   return (
     <ThemeProvider theme={themeMode}>
       <>
         <GlobalStyles />
         <div className="App">
-          <Navbar toggleTheme={themeToggler} />
+          <Navbar toggleTheme={themeToggler} checked={checked}/>
           {/* <Sidebar toggleTheme={themeToggler}/> */}
 
           <Routes>
