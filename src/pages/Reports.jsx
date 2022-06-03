@@ -1,5 +1,6 @@
 import React from 'react';
 import Button3 from '../components/butttons/Button3';
+import GlowCards from '../components/cards/neon/GlowCards';
 
 export const Reports = () => {
   return (
@@ -19,7 +20,7 @@ export const ReportsOne = () => {
 export const ReportsTwo = () => {
   return (
     <div className='reports'>
-      <h1>Reports/reports2</h1>
+      <GlowCards/>
     </div>
   )
 };
