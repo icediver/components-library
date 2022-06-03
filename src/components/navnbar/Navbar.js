@@ -9,6 +9,7 @@ import { GlobalStyles } from '../../styles/Globalstyle';
 import Sidebar from './SideBar/Sidebar';
 import {ReactComponent as Logotype} from '../../assets/svg/logoipsum-logo-7.svg'
 import CheckBox1 from '../chekboxes/CheckBox1';
+import CheckBox2 from '../chekboxes/CheckBox2';
 
 const Navbar = ({ toggleTheme, checked }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +33,7 @@ const Navbar = ({ toggleTheme, checked }) => {
           ))
           }
           <CheckBox1 toggleTheme={toggleTheme} checked={checked}/>
+          <CheckBox2 toggleTheme={toggleTheme} checked={checked}/>
           {/* <NavBtn>
             <Button onClick={toggleTheme} primary="true">
               Toggle theme
