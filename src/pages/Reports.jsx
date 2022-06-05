@@ -1,6 +1,9 @@
 import React from 'react';
 import Button3 from '../components/butttons/Button3';
 import GlowCards from '../components/cards/neon/GlowCards';
+import styled from 'styled-components';
+import PriceCard from '../components/price/PriceCard';
+import TestimonialsSwiper from '../components/testimonials/TestimonialsSwiper';
 
 export const Reports = () => {
   return (
@@ -19,9 +22,17 @@ export const ReportsOne = () => {
 };
 export const ReportsTwo = () => {
   return (
-    <div className='reports'>
+    <>
+    <Container>
       <GlowCards/>
-    </div>
+    </Container>
+      <PriceContainer>
+        <PriceCard/>
+      </PriceContainer>
+      <Container>
+      <TestimonialsSwiper/>
+    </Container>
+    </>
   )
 };
 export const ReportsThree = () => {
@@ -32,4 +43,19 @@ export const ReportsThree = () => {
   )
 };
 
+const Container = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background: #323232; */
+  background: ${({ theme }) => theme.body};
+`;
+const PriceContainer = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #323232;
+`;
 

@@ -32,7 +32,7 @@ const Navbar = ({ toggleTheme, checked }) => {
             </NavMenuLinks>
           ))
           }
-          <CheckBox1 toggleTheme={toggleTheme} checked={checked}/>
+          {/* <CheckBox1 toggleTheme={toggleTheme} checked={checked}/> */}
           <CheckBox2 toggleTheme={toggleTheme} checked={checked}/>
           {/* <NavBtn>
             <Button onClick={toggleTheme} primary="true">
