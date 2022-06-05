@@ -3,6 +3,7 @@ import Button3 from '../components/butttons/Button3';
 import GlowCards from '../components/cards/neon/GlowCards';
 import styled from 'styled-components';
 import PriceCard from '../components/price/PriceCard';
+import TestimonialsSwiper from '../components/testimonials/TestimonialsSwiper';
 
 export const Reports = () => {
   return (
@@ -28,6 +29,9 @@ export const ReportsTwo = () => {
       <PriceContainer>
         <PriceCard/>
       </PriceContainer>
+      <Container>
+      <TestimonialsSwiper/>
+    </Container>
     </>
   )
 };
@@ -45,6 +49,7 @@ const Container = styled.section`
   align-items: center;
   height: 100vh;
   /* background: #323232; */
+  background: ${({ theme }) => theme.body};
 `;
 const PriceContainer = styled.section`
   display: flex;
@@ -53,3 +58,4 @@ const PriceContainer = styled.section`
   height: 100vh;
   background: #323232;
 `;
+
