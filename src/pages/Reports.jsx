@@ -4,6 +4,9 @@ import GlowCards from '../components/cards/neon/GlowCards';
 import styled from 'styled-components';
 import PriceCard from '../components/price/PriceCard';
 import TestimonialsSwiper from '../components/testimonials/TestimonialsSwiper';
+import SvgAnimation from '../components/cards/neon/svgAnimation/SvgAnimation';
+import SnakeBorderBtn from '../components/butttons/SnakeBorderBtn';
+import ToggleBtn from '../components/butttons/ToggleBtn';
 
 export const Reports = () => {
   return (
@@ -14,10 +17,15 @@ export const Reports = () => {
 };
 export const ReportsOne = () => {
   return (
-    <div className='reports'>
-      
+    <>
+    <Container>      
       <Button3/>
-    </div>
+    </Container>
+    <BtnContainer>      
+      <SnakeBorderBtn/>
+      <ToggleBtn/>
+    </BtnContainer>
+    </>
   )
 };
 export const ReportsTwo = () => {
@@ -32,6 +40,9 @@ export const ReportsTwo = () => {
       <Container>
       <TestimonialsSwiper/>
     </Container>
+      <Container>
+      <SvgAnimation />
+    </Container>
     </>
   )
 };
@@ -44,6 +55,7 @@ export const ReportsThree = () => {
 };
 
 const Container = styled.section`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,5 +69,8 @@ const PriceContainer = styled.section`
   align-items: center;
   height: 100vh;
   background: #323232;
+`;
+const BtnContainer = styled(Container)`
+  background: #0c002b;
 `;
 
