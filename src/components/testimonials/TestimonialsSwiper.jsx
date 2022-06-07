@@ -1,16 +1,24 @@
 import React from 'react';
 // Core modules imports are same as usual
 import { EffectCoverflow, Navigation } from 'swiper';
-// Direct React component imports
+/* Direct React component imports
+variant 1
 import {
   Swiper,
   SwiperSlide,
 } from 'swiper/react/swiper-react.js';
-import './styles.scss';
-// Styles must use direct files imports
+Styles must use direct files imports
 import 'swiper/swiper.scss'; // core Swiper
 import 'swiper/modules/navigation/navigation.scss'; // Navigation module
-import 'swiper/modules/pagination/pagination.scss'; // Pagination module
+import 'swiper/modules/pagination/pagination.scss'; // Pagination module */
+import {
+  Swiper,
+  SwiperSlide,
+} from 'swiper/react';
+import './styles.scss';
+import 'swiper/scss'; // core Swiper
+import 'swiper/scss/navigation'; // Navigation module
+import 'swiper/scss/pagination'; // Pagination module
 import styled from 'styled-components';
 import image1 from './1.jpg';
 

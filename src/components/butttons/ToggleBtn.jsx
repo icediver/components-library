@@ -19,20 +19,21 @@ const Button = styled.div`
   position: relative;
   width: 70px;
   height: 70px;
-  background: #fff;
-  box-shadow: inset 0 10px 20px rgba(0,0,0,0.08);
+  /* background: #fff; */
+  box-shadow:  0 10px 20px rgba(0,0,0,0.08);
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   cursor: pointer;
-  transform: scale(0.5);
+  transform: scale(0.8);
   span {
     position: absolute;
     width: 40px;
     height: 6px;
     background: #1863ff;
+    background: ${({theme}) => theme.text};
     border-radius: 4px;
     transition: 0.5s;
     &:nth-child(1) {
