@@ -7,6 +7,8 @@ import TestimonialsSwiper from '../components/testimonials/TestimonialsSwiper';
 import SvgAnimation from '../components/cards/neon/svgAnimation/SvgAnimation';
 import SnakeBorderBtn from '../components/butttons/SnakeBorderBtn';
 import ToggleBtn from '../components/butttons/ToggleBtn';
+import SvgShapes from '../components/butttons/svgShapes/SvgShapes';
+import DropdownMenu from '../components/menus/DropdownMenu';
 
 export const Reports = () => {
   return (
@@ -25,6 +27,10 @@ export const ReportsOne = () => {
       <SnakeBorderBtn/>
       <ToggleBtn/>
     </BtnContainer>
+    <SvgContainer>      
+      <SvgShapes/>
+      
+    </SvgContainer>
     </>
   )
 };
@@ -48,9 +54,11 @@ export const ReportsTwo = () => {
 };
 export const ReportsThree = () => {
   return (
-    <div className='reports'>
-      <h1>Reports/reports3</h1>
-    </div>
+    <>
+      <ContainerDropdownMenu>
+        <DropdownMenu/>
+      </ContainerDropdownMenu>
+    </>
   )
 };
 
@@ -72,5 +80,11 @@ const PriceContainer = styled.section`
 `;
 const BtnContainer = styled(Container)`
   background: #0c002b;
+`;
+const SvgContainer = styled(Container)`
+  background: #06181f;
+`;
+const ContainerDropdownMenu = styled(Container)`
+  background: linear-gradient(45deg, #4e65ff, #92effd);
 `;
 

@@ -38,7 +38,8 @@ const Button = styled.div`
     background: rgba(255,255,255, 0.05);
   }
   &:hover{
-    transform: translateY(10px);
+    transform: translateY(5px);
+    color: ${({theme}) => theme.text};
   }
   span:nth-child(1) {
     position: absolute;
