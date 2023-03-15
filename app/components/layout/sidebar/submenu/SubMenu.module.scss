@@ -1,0 +1,27 @@
+.submenu{
+	@apply w-full;
+	&:hover { @apply bg-[#252831]/30 border-[#632ce4] border-l-4;
+		
+		cursor: pointer;
+	}
+	.item {
+		
+		> svg {
+			@apply inline-block mr-3 mb-1 text-main-text;
+		}
+		
+	}
+	@apply flex  items-center flex justify-between p-5 h-16 no-underline text-base;
+	> span {
+		@apply ml-4;
+	}
+	> button > svg {
+		@apply ml-8  mb-2;
+	}
+}
+.dropDownItem {
+	@apply bg-[#232733]/30 h-16 pl-12 flex items-center no-underline text-main-text text-base hover:bg-[#632ce4]/50;
+	> span {
+		@apply ml-4;
+	}
+}

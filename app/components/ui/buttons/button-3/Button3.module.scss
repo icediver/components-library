@@ -1,0 +1,80 @@
+.button {
+	@apply relative text-[#1670f0] py-3 px-8 text-lg tracking-[0.4rem] uppercase cursor-pointer overflow-hidden active:translate-y-1 hover:text-main-text;
+	box-shadow: 0 2px 15px rgba(0,0,0,.5) ;
+
+	&:before {
+		@apply content-[''] absolute top-[2px] left-[2px] bottom-[2px] w-1/2 bg-white/5;
+		
+	}
+	
+	span:nth-child(1) {
+		@apply absolute top-0 left-0 w-full h-[2px];
+		background: linear-gradient(to right, #0c002b, #1779ff);
+		animation: animate1 linear 2s infinite;
+	}
+	@keyframes animate1 {
+		0%
+		{
+			transform: translateX(-100%);
+		}
+		100%
+		{
+			transform: translateX(100%);
+		}
+		
+	}
+	
+	
+	span:nth-child(2) {
+		@apply absolute top-0 right-0 w-[2px] h-full;
+		background: linear-gradient(to bottom, #0c002b, #1779ff);
+		animation: animate2 linear 2s infinite;
+		animation-delay: 1s;
+	}
+	
+	@keyframes animate2 {
+		0%
+		{
+			transform: translateY(-100%);
+		}
+		100%
+		{
+			transform: translateY(100%);
+		}
+		
+	}
+	
+	span:nth-child(3) {
+		@apply absolute bottom-0 left-0 w-full h-[2px];
+		background: linear-gradient(to left, #0c002b, #1779ff);
+		animation: animate3 linear 2s infinite;
+	}
+	@keyframes animate3 {
+		0%
+		{
+			transform: translateX(100%);
+		}
+		100%
+		{
+			transform: translateX(-100%);
+		}
+		
+	}
+	span:nth-child(4) {
+		@apply absolute top-0 left-0 w-[2px] h-full;
+		background: linear-gradient(to top, #0c002b, #1779ff);
+		animation: animate4 linear 2s infinite;
+		animation-delay: 1s;
+	}
+	@keyframes animate4 {
+		0%
+		{
+			transform: translateY(100%);
+		}
+		100%
+		{
+			transform: translateY(-100%);
+		}
+		
+	}
+}

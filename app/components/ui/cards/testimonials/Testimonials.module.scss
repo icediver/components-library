@@ -1,0 +1,28 @@
+.testimonials {
+	@apply h-screen flex items-center relative max-w-full;
+	-webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
+	.slide {
+		.card {
+			@apply relative w-full mx-auto bg-[#333] py-16 px-10 text-center overflow-hidden ;
+			.layer {
+				@apply absolute top-[calc(100%-2px)] left-0 w-full h-full z-10  duration-500;
+				background: linear-gradient(#03a9f4, #e91e63);
+			}
+			
+			&:hover .layer { @apply top-0;}
+			.content { @apply relative z-20;
+				p { @apply text-base leading-6 mb-5 text-white;}
+				.imgBx { @apply w-28 h-28 mx-auto mb-2.5 rounded-full border-4 border-white relative overflow-hidden;
+					box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+				.image { @apply absolute h-28 object-cover;}			}
+				h2 { @apply text-base text-white;}
+				span { @apply text-[#03a9f4] text-sm transition duration-500 text-sm;}
+				&:hover {span {@apply text-white;}}
+			}
+		}
+	}
+}
+.swiper { @apply w-full py-14;
+	&-slide { @apply bg-center bg-cover w-[350px] min-h-[350px] mx-5;}
+	&-slide-shadow-left, &-slide-shadow-right { @apply bg-none;}
+}

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+.error404 {
+	--primary: #00ffb9;
+	--gray: #9E9BB2;
+	--background: #0a0f27;
+	@apply  h-screen bg-[var(--background)];
+	.moon{}
+.astronaut{@apply absolute bottom-[28rem] right-14 ;}
+.earth{@apply absolute bottom-24 right-60;}
+.shadow{
+	@apply absolute top-0 left-0;
+}
+	.fog2 {
+		@apply absolute bottom-24 left-16;
+	}
+	.fog {
+		@apply absolute bottom-11 right-5;
+	}
+	.textBlock{
+		
+		@apply absolute left-1/2 top-[15%] -ml-40 text-[var(--primary)];
+		font-family: 'Concert One';
+		
+		.text404{
+			@apply   text-9xl ;
+		}
+		.notFound{
+			
+			@apply text-6xl -ml-32 text-[var(--gray)] mb-32;
+		}
+		.home {
+			@apply text-3xl inline-block ;
+		}
+		.arrow {
+			@apply inline-block -mt-3 mr-4 -ml-10;
+		}
+	}
+	
+	.star {
+		@apply absolute h-3 w-3 rounded-full bg-white blur-sm;
+	}
+	
+}
+

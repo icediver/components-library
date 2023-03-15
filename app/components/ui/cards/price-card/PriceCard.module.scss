@@ -1,0 +1,46 @@
+.priceCard {
+	@apply w-[1200px] h-screen mx-auto flex justify-center items-center font-mono font-semibold;
+	font-family: 'Lato',sans-serif;
+	
+	.column { @apply relative w-[400px] inline-block;
+		/* transition: 0.5s; */
+		.box {
+			@apply relative w-[320px] min-h-[550px] mx-auto p-5 box-border text-center rounded-tl-[50px] rounded-tr-[50px] rounded-bl-[150px] rounded-br-[150px] overflow-hidden duration-300 hover:scale-110;
+			background: linear-gradient(0deg, #202022, #464646);
+			border: 3px solid #ffc98e;
+			box-shadow: 0 0 0 6px #323232, 0 0 0 10px #ffc98e, 0 0 0 20px #323232, 0 10px 150px rgba(0,0,0,1);
+			&:before {
+				@apply content-[''] absolute top-0 -left-1/2 w-full h-full bg-white/10 pointer-events-none;
+//
+			}
+			.title {
+				@apply text-white my-1.5 text-xl p-0;
+				.myReactIcons {
+					@apply text-[#ffc98e] mt-1.5 mx-auto;
+					filter: drop-shadow( 2px 2px 5px rgba(0, 0, 0, .7));
+				}
+			}
+			.price {
+				@apply text-6xl text-[#ffc98e] my-2.5 p-0;
+	
+			}
+			.option {
+				@apply m-5 p-0;
+			li {
+				@apply list-none text-white py-2.5 border-b border-white/10 flex items-center;
+				> svg {
+					@apply mr-12;
+				}
+				}
+				li:last-child {
+					@apply border-none;
+				}
+			}
+			.btn {
+				@apply inline-block bg-[#ffc98e] text-[#262626] font-bold py-2.5 px-8 mt-5 no-underline rounded-xl select-none  active:translate-y-1 hover:scale-105;
+				filter: drop-shadow( 2px 2px 5px rgba(0, 0, 0, .7));
+			}
+		}
+		
+	}
+}

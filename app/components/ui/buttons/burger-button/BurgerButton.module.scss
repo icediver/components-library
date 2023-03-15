@@ -1,0 +1,18 @@
+.burger {
+	@apply relative  w-8 h-6 cursor-pointer z-50 before:top-0 after:bottom-0;
+	& > span {
+		@apply absolute bg-main-text w-full h-1 left-0 top-2.5 transition-all duration-300 ease-out;
+	}
+	&:before,
+	&:after {
+		@apply content-[''] bg-main-text absolute w-full h-1 left-0 transition-all duration-300 ease-out;
+	}
+	&.active {
+	@apply before:rotate-45 before:top-2 after:-rotate-45 after:top-2;
+	& > span {
+		@apply scale-0;
+	}
+}
+
+}
+

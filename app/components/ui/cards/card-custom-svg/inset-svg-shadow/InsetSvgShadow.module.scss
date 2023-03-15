@@ -1,0 +1,5 @@
+.shadow {
+	> svg {
+		filter: url(#inset-shadow);
+	}
+}

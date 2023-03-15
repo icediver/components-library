@@ -1,0 +1,43 @@
+.button {
+	
+	@apply relative w-48 h-16 select-none hover:before:-indent-1 hover:after:-indent-1 hover:after:blur active:translate-y-1;
+	
+	
+	&:before,
+	&:after {
+		@apply content-[''] absolute inset-0 bg-[#f00] transition duration-500;
+	}
+	
+	&:before,
+	&:after {
+		background: linear-gradient(
+				45deg,
+				#00ccff,
+				#0e1538,
+				#d400d4
+		);
+	}
+	
+	
+	> span {
+		@apply absolute top-0 left-0 w-full h-full bg-[#1f2833] z-30 flex justify-center items-center text-lg uppercase border border-[#040a29] overflow-hidden tracking-[0.4rem];
+		
+		/* background: #0e1538; */
+	
+	&:before {
+		@apply content-[''] absolute top-0 -left-1/2 w-full h-full bg-[#fff]/5 skew-x-[25deg];
+
+		}
+	}
+}
+.second {
+	&:before,
+	&:after {
+		background: linear-gradient(
+				45deg,
+				#ff075b,
+				#0e1538,
+				#0e1538,
+				#1aff22
+		);
+	}}

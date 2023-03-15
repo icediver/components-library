@@ -1,0 +1,29 @@
+.modal {
+	@apply w-full h-full bg-[#000]/50 fixed flex justify-center items-center;
+	
+	
+	
+	.wrapper {
+		@apply w-[800px] shadow-[rgba(149,157,165,0.4)_0_8px_24px] bg-white text-black grid grid-cols-2 relative z-10;
+	
+	.image {
+		@apply w-full h-full bg-[#000];
+	}
+	
+	.content {
+		@apply flex flex-col justify-center items-center text-[#141414];
+
+		p {
+			@apply mb-4;
+		}
+		
+		button {
+			@apply py-2.5 px-6 bg-[#141414] text-white border-none rounded-md hover:text-main-text hover:scale-105 active:translate-y-1;
+		}
+		
+	}
+	
+	.closeBtn {
+		@apply cursor-pointer absolute top-5 right-5 w-8 h-8 p-0 z-10 hover:text-red;
+	}
+}}

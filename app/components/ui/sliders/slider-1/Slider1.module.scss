@@ -1,0 +1,16 @@
+.slider {
+	--background: #1F2833;
+	--hover:  #cd853f;
+	@apply bg-[var(--background)] relative h-screen flex justify-center items-center;
+
+	.arrowRight, .arrowLeft {
+		@apply absolute top-1/2 text-[3rem] text-[#000] z-10 cursor-pointer select-none;
+		&:hover { @apply fill-[var(--hover)] scale-105}
+	}
+	.arrowRight{ @apply right-8;}
+	.arrowLeft { @apply left-8; }
+}
+.slide { @apply opacity-0 duration-500 mt-16;
+	box-shadow: rgba(149, 157, 165, 0.4) 0 8px 24px;
+}
+.slide.active { @apply opacity-100 duration-500 scale-110;}

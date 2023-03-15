@@ -1,0 +1,18 @@
+.CardCustomSvg {
+	--background: #0a0f27;
+	--cardbody: #add8e6;
+	@apply bg-[var(--background)] w-screen h-screen;
+	.wrapper {
+		@apply h-[900px] flex justify-center mx-auto pt-28;
+		
+		> svg {
+			@apply fill-[var(--cardbody)] p-5;
+			//		filter: url(#inset-shadow);
+			> path {
+			}
+		}
+	}
+}
+	
+	
+

@@ -1,0 +1,25 @@
+.section {
+	--arrow: #000d1a;
+	--hover: #cd853f;
+	@apply h-screen max-h-[1100px] relative overflow-hidden;
+
+@media screen and (max-width: 900px) { @apply h-[85vh]; }
+
+.wrapper { @apply w-full h-full flex justify-center items-center overflow-hidden relative;}
+.slide { @apply z-10 w-full h-full; }
+.slider { @apply absolute top-0 left-0 w-full h-full flex items-center justify-center;
+	&::before { content: ''; @apply absolute z-20 w-full h-screen bottom-0 left-0 overflow-hidden opacity-40 bg-[linear-gradient(0deg,rgba(0,0,0,0.2)0%,rgba(0,0,0,0.2)50%,rgba(0,0,0,0.6)100%)];}}
+.image { @apply absolute top-0 left-0 w-screen h-screen object-cover;}
+.content { @apply ml-[350px] relative z-30 flex flex-col max-w-[1600px] w-[calc(100%-100px)] text-white;
+	h1 { @apply text-[clamp(1rem,_8vw,_2rem)] font-normal uppercase drop-shadow-[0px_0px_20px_rgba(0,0,0,0.4)] text-left mb-3.5  ;	}
+	
+	p { @apply mb-5 drop-shadow-[0px_0px_20px_rgba(0,0,0,0.4)];}
+}
+.arrow { @apply ml-2;}
+
+.sliderButtons { @apply absolute bottom-14 right-14 flex z-30; }
+
+.arrowButtons { @apply w-14 h-14 text-white cursor-pointer bg-[var(--arrow)] rounded-[50px] p-2.5 mr-4 select-none transition duration-300;
+	
+	&:hover { @apply bg-[var(--hover)] scale-105;}
+}}

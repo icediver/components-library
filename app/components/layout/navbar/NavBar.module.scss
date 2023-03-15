@@ -1,0 +1,53 @@
+.nav {
+	--primary: #00ffb9;
+	@apply text-[var(--primary)] flex h-16 py-4 px-8 z-50 fixed bg-black/40 w-full;
+	
+	@media screen and (max-width: 900px) {
+		@apply justify-between;
+		
+	}
+}
+.container {
+	@apply mx-auto flex justify-between w-5/12 h-full;
+	@media screen and (max-width: 900px) {
+		@apply w-4/5 justify-center;
+	}
+}
+.navLink {
+	@apply flex items-center px-4 cursor-pointer no-underline;
+}
+
+
+.logo {
+	@apply fill-[var(--primary)] ml-10;
+	
+}
+
+
+
+.navMenu {
+	@apply w-full flex justify-between items-center -ml-12;
+	
+}
+
+
+.navMenuLinks {
+
+	@media screen and (max-width: 900px) {
+		display: none;
+	}
+}
+
+.navBtn {
+	display: flex;
+	align-items: center;
+	margin-right: 24px;
+	@media screen and (max-width: 900px) {
+		display: none;
+	}
+}
+
+.burgerButton {
+
+}
+

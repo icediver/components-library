@@ -1,0 +1,10 @@
+.menu {
+	
+	@apply mt-16 bg-black/40 -left-64 w-64 h-full fixed top-0 transition-all ease-out duration-500 z-10;
+
+	&.active {
+		@apply bg-[#15171c]/60 left-0;
+	}
+	
+	
+}

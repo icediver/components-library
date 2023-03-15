@@ -1,0 +1,29 @@
+.svgStrokeAnimation {
+	@apply w-screen h-screen;
+.container{ @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#001e2d] box-border border-2 border-[#000]/5;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+	
+	.content { @apply absolute top-4 left-4 right-4 bottom-4 border-2 border-[#ffeb3b] p-8 text-center text-white;
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+		
+		h1 { @apply  text-2xl mb-2.5 p-0}
+	}
+	
+	svg, svg rect { @apply absolute top-0 left-0 w-full h-full fill-transparent;}
+//	svg {
+//		rect {
+//			animation: animate 3s linear infinite;
+//		}
+//
+//		@keyframes animate {
+//			0% {
+//				stroke-dashoffset: 800;
+//			}
+//			100% {
+//				stroke-dashoffset: 0;
+//			}
+//
+//		}
+//	}
+	}
+}
