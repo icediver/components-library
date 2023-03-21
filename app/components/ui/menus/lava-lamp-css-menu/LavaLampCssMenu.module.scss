@@ -1,0 +1,31 @@
+ .container {
+	 @apply w-screen  pt-20 flex flex-col justify-start items-center text-xs font-sans ;
+	 h1{@apply text-4xl;
+	  font-family: var(--cherry);
+	 }
+	.navbar { @apply mt-7 mx-auto relative w-2/5 h-12 bg-[#34495e] rounded-lg;
+	a { @apply leading-[50px] h-full text-sm inline-block relative z-10 no-underline uppercase text-center text-white cursor-pointer;
+	}
+	.animation { @apply absolute h-full top-0 z-0 transition-all duration-300 ease-in delay-200 rounded-lg;	}
+
+	a:nth-child(1) { @apply w-1/5;}
+
+	a:nth-child(2) {  @apply w-1/5;}
+
+	a:nth-child(3) {  @apply w-1/5;}
+
+	a:nth-child(4) { @apply w-1/5;}
+
+	a:nth-child(5) {  @apply w-1/5;}
+   .start-home,
+	a:nth-child(1):hover ~ .animation {  @apply w-1/5 left-0 bg-[#1abc9c];}
+	 .start-about,
+	a:nth-child(2):hover ~ .animation {  @apply w-1/5 left-[20%] bg-[#e74c3c];}
+	 .start-blog,
+	a:nth-child(3):hover ~ .animation {  @apply w-1/5 left-[40%] bg-[#3498db];}
+	 .start-portefolio,
+	a:nth-child(4):hover ~ .animation { @apply w-1/5 left-[60%] bg-[#9b59b6];}
+	 .start-contact,
+	a:nth-child(5):hover ~ .animation { @apply w-1/5 left-[80%] bg-[#e67e22];}
+	}
+}

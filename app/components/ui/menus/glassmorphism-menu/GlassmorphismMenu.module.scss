@@ -1,0 +1,71 @@
+.menu { @apply flex justify-center items-center h-1/5 bg-[#1e2759] w-1/2 mx-auto;
+	ul { @apply relative flex items-center justify-center rounded-xl;
+		box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+		 > li { @apply flex list-none;
+				.link { @apply relative z-50 inline-block px-7 py-5 text-white no-underline backdrop-blur-xl;
+					.icon { @apply pointer-events-none text-4xl opacity-25 transition duration-300;
+					}
+				}
+		 }
+
+.marker { @apply absolute top-0 z-10 transition duration-500;
+		&::before { @apply content-[''] absolute -top-2.5 left-1/2 transform -translate-x-1/2 w-12 h-12 duration-700 rounded-md bg-[#0f0];
+			box-shadow: 0 0 15px #0f0,
+			0 0 30px #0f0, 
+			0 0 45px #0f0,
+			0 0 60px #0f0;
+		}
+	}
+ li:nth-child(1):hover ~ .marker::before { @apply -left-[200px] bg-[#5da6ff];
+	box-shadow: 0 0 16px #5da6ff,
+	0 0 30px #5da6ff,
+	0 0 45px #5da6ff,
+	0 0 60px #5da6ff;
+}
+li:nth-child(1):hover {
+	.icon {
+	stroke: #5da6ff;
+} }
+ li:nth-child(2):hover ~ .marker::before { @apply -left-[100px] bg-[#ff0];
+	box-shadow: 0 0 16px #ff0,
+	0 0 30px #ff0,
+	0 0 45px #ff0,
+	0 0 60px #ff0;
+}
+li:nth-child(2):hover {
+	.icon {
+		stroke: #ff0;
+	} }
+
+li:nth-child(3):hover ~ .marker::before { @apply left-[0px] bg-[#0f0];
+	box-shadow: 0 0 16px #0f0,
+	0 0 30px #0f0,
+	0 0 45px #0f0,
+	0 0 60px #0f0;
+}
+li:nth-child(3):hover {
+	.icon {
+		stroke: #0f0;
+	} }
+li:nth-child(4):hover ~ .marker::before { @apply left-[100px] bg-[#df2fff];
+	box-shadow: 0 0 16px #df2fff,
+	0 0 30px #df2fff,
+	0 0 45px #df2fff,
+	0 0 60px #df2fff;
+}
+li:nth-child(4):hover {
+	.icon {
+		stroke: #df2fff;
+	} }
+li:nth-child(5):hover ~ .marker::before { @apply left-[200px] bg-[#ff308f];
+	box-shadow: 0 0 16px #ff308f,
+	0 0 30px #ff308f,
+	0 0 45px #ff308f,
+	0 0 60px #ff308f;
+}
+li:nth-child(5):hover {
+	.icon {
+		stroke: #ff308f;
+	} }
+}
+}

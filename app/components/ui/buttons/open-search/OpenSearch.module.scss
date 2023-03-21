@@ -1,0 +1,40 @@
+.openSearch {
+  @apply w-full h-full;
+  font-family: "Cabin" ;
+
+  .container {
+    @apply block py-1  h-full outline-none;}
+  .searchContainer {
+    @apply overflow-hidden float-right h-16 w-16 rounded-full shadow-white/30 shadow-[0_0_3px] transition-all duration-300 ;
+    &:hover,
+    &:focus,
+    &:focus-within {
+      @apply w-60 rounded-r-full rounded-l-3xl  outline-none;
+ 
+      .input {
+        @apply w-32  inline-block p-2.5;
+      }
+    }
+  .input {
+    @apply appearance-none float-left w-0 h-8 m-4 -mr-20 bg-white/10 text-base text-[#6a5d4f] font-semibold p-0 border-0 rounded-md transition-all duration-300;
+     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2) inset;
+     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      &:focus {
+        outline: none;
+        box-shadow: 0 -1px 1px rgba(255, 255, 255, 0.25), 0 1px 5px rgba(0, 0, 0, 0.15);
+      }
+
+     }}
+  .button {
+    @apply flex items-center justify-center float-right w-14 h-14 m-1 /*bg-white/10*/ bg-[#26313F] text-white/20 text-center text-2xl;
+
+    border-radius: 50%;
+    box-shadow: 0 -1px 1px rgba(255, 255, 255, 0.25), 0 1px 1px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 -2px 1px rgba(0, 0, 0, 0.3);
+  }
+  &:active {
+    border: 0 !important;
+    text-shadow: 0 0 0;
+    font-size: 85%;
+  }
+}

@@ -1,0 +1,33 @@
+.loader {
+	--spinny: 10rem;
+	--background: linear-gradient(45deg, transparent, transparent 40%, #ee55ff);
+	$background: linear-gradient(45deg, transparent, transparent 40%, #ee55ff);
+	$spinny: 10rem;
+	--tw-blur: 2rem;
+	
+	@apply mx-auto relative w-52 h-52 rounded-full  bg-gradient-to-tr from-transparent via-transparent to-[#ee55ff] 	animate-[spinny_3s_linear_infinite];
+	
+	
+	&::before {
+		@apply content-[''] absolute top-[calc(var(--spinny)/30)] left-[calc(var(--spinny)/30)] right-[calc(var(--spinny)/30)] bottom-[calc(var(--spinny)/30)] z-50 rounded-full bg-[#000];
+	}
+	
+	&::after {
+		@apply content-[''] absolute top-0 left-0 right-0 bottom-0 z-0 rounded-full  bg-gradient-to-tr  from-transparent   via-transparent to-[#ee55ff] filter blur-2xl ;
+		
+		
+//		background: $background;
+//		border-radius: 50%;
+//		filter: blur($spinny / 5);
+	}
+	@keyframes spinny {
+		0% {;
+			transform: rotate(0);
+			filter: hue-rotate(0);
+		}
+	100% {
+		transform: rotate(360deg);
+		filter: hue-rotate(360deg);
+	}
+	}
+}

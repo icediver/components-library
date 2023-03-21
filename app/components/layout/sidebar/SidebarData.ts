@@ -1,12 +1,15 @@
 import { IconType } from 'react-icons';
-import { AiFillHome } from 'react-icons/ai';
+import { AiFillHome, AiOutlineForm } from 'react-icons/ai';
+import { BiLoader } from 'react-icons/bi';
 import { BsWindowX } from 'react-icons/bs';
 import { CgTemplate } from 'react-icons/cg';
 import { FaCartPlus, FaEnvelopeOpenText } from 'react-icons/fa';
 import { FiPower } from 'react-icons/fi';
+import { GiSkullCrossedBones } from 'react-icons/gi';
 import { IoIosPaper, IoMdHelpCircle, IoMdPeople } from 'react-icons/io';
 import { IoIdCardOutline, IoShapesOutline } from 'react-icons/io5';
 import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri';
+import { RxDropdownMenu } from 'react-icons/rx';
 import {
 	TfiGallery,
 	TfiLayoutAccordionList,
@@ -57,14 +60,19 @@ export const SidebarData: ISidebarData[] = [
 				Icon: TfiLayoutTab
 			},
 			{
-				title: 'Accordion',
-				path: '/accordion',
-				Icon: IoIosPaper
+				title: 'Skeletons',
+				path: '/ui1/skeletons',
+				Icon: GiSkullCrossedBones
 			},
 			{
-				title: 'Modal',
-				path: '/modal',
-				Icon: IoIosPaper
+				title: 'Forms',
+				path: '/ui1/forms',
+				Icon: AiOutlineForm
+			},
+			{
+				title: 'Menus',
+				path: '/ui1/menus',
+				Icon: RxDropdownMenu
 			}
 		]
 	},
@@ -92,7 +100,11 @@ export const SidebarData: ISidebarData[] = [
 				title: 'Shapes',
 				path: '/ui/shapes',
 				Icon: IoShapesOutline
-			}
+			},{
+				title: 'Loaders',
+				path: '/ui/loaders',
+				Icon: BiLoader
+			},
 		]
 	},
 	{

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+.navigation { @apply mx-auto my-20 text-black relative flex items-center justify-center w-[800px] h-[100px] bg-white rounded-md shadow-[3px_3px_8px_black];
+	--clr: #222327;
+	font-family: 'Poppins', sans-serif;
+
+	ul{ @apply flex w-[500px] ;
+		
+		li{ @apply w-1/5 z-10 no-underline relative;
+			.link{ @apply relative flex flex-col justify-center items-center font-medium no-underline;
+				.icon{ @apply relative block text-4xl leading-[75px] duration-700 text-[#2C3E50] ;
+					 filter: drop-shadow(0 0 1px #2C3E50);
+				}
+				.text{ @apply absolute text-[#2C3E50] text-lg font-semibold tracking-wider transition-all translate-y-8 duration-500 opacity-0;}
+			}
+		}
+		li.active a .icon{ @apply text-[#0d4e4e] -translate-y-[3.25rem]
+		}
+		li.active a .text{ @apply opacity-100 translate-y-4;
+		
+		}
+		li:nth-child(1).active ~ .indicator{ @apply translate-x-[calc(100px*0)]}
+		
+		li:nth-child(2).active ~ .indicator{@apply translate-x-[calc(100px*1)]}
+		
+		li:nth-child(3).active ~ .indicator{@apply translate-x-[calc(100px*2)]}
+		
+		li:nth-child(4).active ~ .indicator{@apply translate-x-[calc(100px*3)]}
+		
+		li:nth-child(5).active ~ .indicator{@apply translate-x-[calc(100px*4)]}
+	}
+	.indicator{ @apply bg-[#29fd53] w-[100px] h-[100px] absolute top-[calc(-50%-2px)] border-[6px] border-[#2C3E50] rounded-full duration-500 shadow-[inset_0_0_7px_#2C3E50];
+		
+		&::before{ @apply content-[''] absolute top-[calc(50%+1px)] w-5 h-5 bg-transparent -left-[22px] rounded-tr-[1.25rem] shadow-[0px_-10px_0_0_#2C3E50];}
+		&::after{@apply content-[''] absolute top-[calc(50%+1px)] w-5 h-5 bg-transparent -right-[22px] rounded-tl-[1.25rem] shadow-[0px_-10px_0_0_#2C3E50];}
+	}
+}

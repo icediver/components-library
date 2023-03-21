@@ -5,13 +5,9 @@
 	inset 0 8px 8px rgba(0, 0, 0, 0.1),
 	inset 0 -4px 4px rgba(0, 0, 0, 0.1);
 	.toggler {
-	@apply absolute top-0 left-0 w-8 h-8 rounded-full scale-90 duration-500;
+	@apply absolute top-0 left-0 w-8 h-8 rounded-full scale-90 duration-500 bg-gradient-to-b from-[#2c3949] to-[#1f2833];
 	
-		background: linear-gradient(
-				to bottom,
-				#2c3949,
-				#1f2833
-		);
+//		background: linear-gradient(to bottom,#2c3949,#1f2833);
 		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5),
 		inset 0 1px 1px rgba(255, 255, 255, 0.2),
 		inset 0 -1px 1px rgba(255, 255, 255, 0.2);
@@ -21,9 +17,9 @@
 		inset 0 1px 6px rgba(0, 0, 0, 1),
 		inset 0 -1px 1px rgba(0, 0, 0, 0.8);
 		.toggler {
-			@apply left-8 bg-main-text;
+			@apply left-8 bg-main-text bg-gradient-to-b from-[#00ffb9] to-[#13dca4];
 //			background: linear-gradient(to bottom,#eaeaea,#f9f9f9	);
-			background: linear-gradient(to bottom,#00ffb9, #13dca4);
+//			background: linear-gradient(to bottom,#00ffb9, #13dca4);
 			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7),
 			inset 1px 1px 2px rgba(255, 255, 255, 0.5),
 				/* -1px 1px 20px rgba(0, 0, 0, 0.5), */ inset 2px

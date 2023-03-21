@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import React, { Dispatch, FC, SetStateAction, useEffect } from 'react';
+import React, { Dispatch, FC, SetStateAction } from 'react';
 import styles from './BurgerButton.module.scss';
 
 interface IBurgerButton {
@@ -8,7 +8,7 @@ interface IBurgerButton {
 }
 
 const BurgerButton: FC<IBurgerButton> = ({isOpen, setIsOpen}) => {
-	useEffect(() => {console.log(isOpen)}, [isOpen])
+	
 	return (
 		<div
 			className={cn(styles.burger, { [styles.active]: isOpen })}

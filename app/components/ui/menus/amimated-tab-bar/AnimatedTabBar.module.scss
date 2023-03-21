@@ -1,0 +1,49 @@
+.animatedTabBar {
+
+	--bgColorMenu : #1d1d27;
+	
+	@apply w-2/4  mx-auto my-10 box-border transition-colors duration-700 m-0 flex h-52 items-center justify-center overflow-hidden bg-[var(--bubble-color)];
+	-webkit-tap-highlight-color: transparent;
+.menu{
+	@apply m-0 flex items-center justify-center w-[32.05em] h-24 text-xl py-0 px-[3.8rem] relative  bg-[var(--bgColorMenu)];
+}
+
+.menu__item{ @apply flex grow cursor-pointer relative rounded-full items-center justify-center pt-2 px-0 pb-3 z-50 will-change-transform transition-all duration-700 delay-300;
+	
+	&:before{
+		@apply content-[''] -z-10 w-[4.5rem] h-[4.5rem] rounded-full absolute   bg-[var(--bubble-color)] transform scale-0 transition-all  duration-700 ease-in-out transform delay-75;
+}
+}
+.menu__item.active {
+	@apply transform -translate-y-4 ;
+	
+}
+
+.menu__item.active::before{ @apply bg-[var(--bubble-color)] transform scale-100;}
+
+.icon{ @apply w-14 h-14 stroke-white fill-transparent stroke-1 ;
+	stroke-miterlimit: 10;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-dasharray: 400;
+}
+
+.menu__item.active .icon {
+	
+	animation: strok 1.5s reverse;
+	
+}
+
+@keyframes strok {	100% {stroke-dashoffset: 400;	} }
+
+.menu__border{
+	@apply transition-all transform delay-75 duration-700 bottom-[99%] w-60 h-12 absolute will-change-transform bg-[var(--bgColorMenu)];
+	clip-path: url(#menu);}
+
+.svg-container { @apply w-0 h-0}
+
+
+@media screen and (max-width: 50em) {
+	.menu{ @apply text-xs	}
+}}
+

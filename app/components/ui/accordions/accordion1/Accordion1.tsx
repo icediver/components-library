@@ -1,4 +1,4 @@
-import { Data } from '@/temporary/components/accordion/data/Data';
+import { Data } from '@/app/components/ui/accordions/accordion1/data/Data';
 import React, { FC, useState } from 'react';
 import { IconContext } from 'react-icons';
 import { FiMinus, FiPlus } from 'react-icons/fi';
